@@ -24,7 +24,7 @@ namespace MongoDAL.Repositories
                 if (_conn == null || _dbName == null)
                 {
                     _dbName = "UserDB";
-                    _conn = "mongodb://localhost/UserDB?safe=true";
+                    _conn = "mongodb://localhost/News?safe=true";
                 }
                 var client = new MongoClient(_conn);
                 var server = client.GetServer();
