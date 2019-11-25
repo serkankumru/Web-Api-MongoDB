@@ -1,0 +1,57 @@
+.content-container {
+    background: #FFF;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+}
+
+.contentForm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 360px;
+}
+
+.contentInput {
+    width: 60px;
+    margin-top: 0px !important;
+}
+
+input {
+    margin-top: 5px;
+}
+
+textarea.form-control {
+    margin-top: 5px;
+    height: 100px;
+}
+
+#tokenDetail {
+    color: green;
+}
+
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+    #customers td, #customers th {
+        padding-left: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+
+    #customers th {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }

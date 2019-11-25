@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="asset/jquery-3.3.1.js"></script>
+    <script src="asset/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="asset/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="asset/style.css">
+
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>web-api-mongo-sql</h1>
+        <p id="tokenDetail">You need login</p>
+    </div>
+
+    <div class="container" style="border-left:10px;">
+        <div class="row" style="margin-left:0px;">
+            <input type="button" onclick="isHiddenLogin()" id="tokenButton" class="btn btn-info" value="Login">
+            <input type="button" onclick="GetNewsEntity(); isHiddenGet();" class="btn btn-default" value="Get EF">
+            <input type="button" onclick="GetNewsMongo(); isHiddenGet();" class="btn btn-default" value="Get MD">
+            <input type="button" onclick="isHiddenGetId()" class="btn btn-default" value="Get/Id">
+            <input type="button" onclick="isHiddenPost()" class="btn btn-default" value="Post">
+            <input type="button" onclick="isHiddenPut()" class="btn btn-default" value="Put">
+            <input type="button" onclick="isHiddenDelete()" class="btn btn-default" value="Delete">
+        </div>
+    </div>
+
+
+    <div class="container" style="border-left:10px;">
+        <div class="row" style="margin-left:0px;">
+            <div class="col-4 contentForm">
+                <form class="contentLogin" action="#">
+                    <input type="text" id="FormName" class="form-control" placeholder="Name">
+                    <input type="password" id="FormPassword" class="form-control" placeholder="Password">
+                    <input type="button" onclick="GetToken()" class="btn btn-success btn-block" value="Get Token">
+                </form>
+                <form class="contentGetId" action="#">
+                    <input type="text" id="GetId" class="form-control" placeholder="Id">
+                    <input type="button" onclick="GetNewsId()" class="btn btn-success btn-block" value="Get">
+                </form>
+                <form class="contentPost" action="#">
+                    <input type="text" id="PostName" class="form-control" placeholder="Name">
+                    <textarea id="PostText" class="form-control" placeholder="Text"></textarea>
+                    <input type="button" onclick="PostNews()" class="btn btn-success btn-block" value="Post">
+                </form>
+                <form class="contentPut" action="#">
+                    <input type="text" id="PutId" class="form-control" placeholder="Id">
+                    <input type="text" id="PutName" class="form-control" placeholder="Name">
+                    <textarea id="PutText" class="form-control" placeholder="Text"></textarea>
+                    <input type="button" onclick="PutNews()" class="btn btn-success btn-block" value="Post">
+                </form>
+                <form class="contentDelete" action="#">
+                    <input type="text" id="DeleteId" class="form-control" placeholder="Id">
+                    <input type="button" onclick="DeleteNews()" class="btn btn-danger btn-block" value="Delete">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <table id="customers" class="tableList"></table>
+    </div>
+
+    <script>
+        window.onload = startInterval();
+    </script>
+</body>
+
+</html> 
